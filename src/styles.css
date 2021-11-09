@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+.inline {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+td {
+    width: 20%;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+/* 
+.container {
+    margin: 2% 5%;
+    align-items: center;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+
+
+.btnAction {
+    margin: 0 10px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 10px 12px;
+    font-size: 12px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btnAction:focus {
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 50%);
+}
+
+table {}
+
+.card {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.col2 {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    width: 50%;
+}
+
+h1 {
+    text-align: center;
+} */

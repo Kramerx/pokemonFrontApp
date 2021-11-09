@@ -1,0 +1,1 @@
+export const serviceUrl = 'https://pokemon-pichincha.herokuapp.com/pokemons';

@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="formPokemon" action="" (ngSubmit)="onAddUpdatePokemon()" validate>
+                <div class="row">
+                    <div class="col-12 py-2 text-center">
+                        <h3>{{pokemon.id?"Editar ":"Nuevo "}} Pokemon</h3>
+                    </div>
+                    <div class="col-6">
+                        <div class="inline">
+                            <label for="" class="w-25">Nombre:</label>
+                            <input type="text" class="form-control w-50"
+                                [ngClass]="formPokemon.controls['name'].invalid ? 'border border-danger':''"
+                                formControlName="name">
+                        </div>
+                        <div class="inline">
+                            <label for="" class="w-25">Imagen:</label>
+                            <input type="text" class="form-control w-50"
+                                [ngClass]="formPokemon.controls['image'].invalid ? 'border border-danger':''"
+                                formControlName="image">
+                        </div>
+                        <div class="inline">
+                            <label for="" class="w-25">Tipo:</label>
+                            <select class="w-50 form-select"
+                                [ngClass]="formPokemon.controls['type'].invalid ? 'border border-danger':''"
+                                formControlName="type">
+                                <option *ngFor="let type of typesPokemon" [value]="type">{{type | uppercase}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="inline">
+                            <label for="" class="w-25">Vida:</label>
+                            {{minValue}}&nbsp;
+                            <input type="range" name="" [min]="minValue" [max]="maxValue" id="" class="form-range w-50"
+                                formControlName="hp">&nbsp;
+                            {{maxValue}}
+                        </div>
+                        <div class="inline">
+                            <label for="" class="w-25">Ataque:</label>
+                            {{minValue}}&nbsp;
+                            <input type="range" name="" [min]="minValue" [max]="maxValue" id="" class="form-range w-50"
+                                formControlName="attack">&nbsp;
+                            {{maxValue}}
+                        </div>
+                        <div class="inline">
+                            <label for="" class="w-25">Defensa:</label>
+                            {{minValue}}&nbsp;
+                            <input type="range" name="" [min]="minValue" [max]="maxValue" id="" class="form-range w-50"
+                                formControlName="defense">&nbsp;
+                            {{maxValue}}
+                        </div>
+                    </div>
+                    <div class="col-12 text-center py-2">
+                        <input type="submit" value="Guardar" class="btn btn-primary mx-1"
+                            [disabled]="!formPokemon.valid">
+                        <input type="button" value="Cancelar" class="btn btn-primary mx-1" (click)="onClickCancel()">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
